@@ -1,0 +1,2 @@
+# BoolsPython
+1Byteにつき8ずつBoolを格納可能にするスクリプト
