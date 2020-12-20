@@ -16,7 +16,11 @@ class Bools(object):
         ret = 0
         cnt = 0
         for i in self.bits:
-            ret = ret | bin(i==0) << cnt
+            if i == 0:
+                ret = ret & ~pow(2, cnt)
+            else:
+                ret = ret | pow(2,cnt)
+            #ret = ret | bin(i==0) << cnt
             cnt = cnt + 1
         return ret
     
